@@ -2,7 +2,7 @@
 
 Emberbase.Router.map ->
   @resource 'news', ->
-    @route('item')
+    @route('item', path: '/:id')
     
   @route('login')
 

@@ -1,1 +1,9 @@
 <h2>News items:</h2>
+
+{{#each news}}
+  {{#link-to 'news.item' this}}
+    {{this.name}}
+  {{/link-to}}
+  
+  <br />
+{{/each}}
