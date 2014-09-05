@@ -1,0 +1,10 @@
+<h2>Index view</h2>
+
+{{#if session.isAuthenticated}}
+  <a href="#" {{action 'invalidateSession'}}>Logout</a>
+{{else}}
+  {{#link-to 'login'}}Login{{/link-to}}
+{{/if}}
+
+<br />
+{{#link-to 'news'}}See some news yo{{/link-to}}
