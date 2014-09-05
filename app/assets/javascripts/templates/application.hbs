@@ -1,3 +1,10 @@
 <h1>Application root view</h1>
 
+{{#if session.isAuthenticated}}
+  <strong>Logged in as</strong> {{session.content.user_email}}
+  
+  <a href="#" {{action 'invalidateSession'}}>Logout</a>
+{{else}}
+  {{#link-to 'login'}}Login{{/link-to}}
+{{/if}}
 {{outlet}}
